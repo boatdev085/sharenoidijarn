@@ -33,8 +33,12 @@ export default function SectionGuild() {
 const ContentDownload = styled.div`
   height: 231px;
   padding: 40px 50px 0 50px;
-  background: gray;
   margin-bottom: 8px;
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url(/static/images/guilde/guilde_01.jpg);
 `
 
 const WrapTitle = styled.div`
@@ -72,13 +76,4 @@ const Card = styled.div`
   height: 172px;
   background: skyblue;
   margin-right: 8px;
-`
-
-const WrapShowCard = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  ${Card}:last-child {
-    margin-right: 0;
-  }
 `

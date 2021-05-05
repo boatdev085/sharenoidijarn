@@ -6,19 +6,24 @@ export default function MainHeader() {
   return (
     <Container>
       <CustomLayoutWrapper>
-        <WrapLogo>logo</WrapLogo>
+        <WrapLogo>
+          <img src='/static/images/logo/logo_menu.png' alt='logo' />
+        </WrapLogo>
         <WrapMenu>
-          <Menu>boat</Menu>
-          <Menu>boat</Menu>
-          <Menu>boat</Menu>
+          <Menu>หน้าแรก</Menu>
+          <Menu>สมัครสมาชิก</Menu>
+          <Menu>ดาวน์โหลด</Menu>
+          <Menu>โปรโมชั่น</Menu>
+          <Menu>เข้าสู่ระบบ</Menu>
+          <Menu>ติดต่อเรา</Menu>
         </WrapMenu>
       </CustomLayoutWrapper>
-      {/* <CustomLayoutWrapMaQueen>
-        <Marquee gradient={false} speed={100} delay={10}>
+      <CustomLayoutWrapMaQueen>
+        <Marquee gradient={false} speed={100}>
           สล็อตออนไลน์อันดับ 1 ที่เด่นเรื่องการดูแลลูกค้าตลอด 24 ชั่วโมง
           พร้อมระบบอัตโนมัติที่เสถียรที่สุดย
         </Marquee>
-      </CustomLayoutWrapMaQueen> */}
+      </CustomLayoutWrapMaQueen>
     </Container>
   )
 }
@@ -29,7 +34,7 @@ const Container = styled.div`
 `
 
 const CustomLayoutWrapper = styled(LayoutWrapper)`
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
 `
@@ -39,6 +44,10 @@ const WrapLogo = styled.div`
   flex-direction: column;
   justify-content: center;
   color: ${({ theme }) => theme.colors.white};
+  img {
+    width: 200px;
+    height: 40px;
+  }
 `
 
 const WrapMenu = styled.div`

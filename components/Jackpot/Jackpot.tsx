@@ -14,7 +14,7 @@ const WrapJackpot = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  background: red;
+  background-color: #260000;
   padding: 8px;
 `
 

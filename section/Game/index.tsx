@@ -1,41 +1,40 @@
 import styled from 'styled-components'
 import Panel from '../../components/Panel/Index'
 
+const gameItems = []
 export default function SectionGame() {
   return (
     <Panel title='เกมส์ค่าย MFGAME88' subTitle='MFGAME88 & BLOG'>
       <WrapShowCard>
-        <Row>
-          <Card>boat</Card>
-          <Card>boat</Card>
-        </Row>
-        <Row>
-          <Card>boat</Card>
-          <Card>boat</Card>
-        </Row>
+        {Array.apply(null, { length: 24 }).map((_, idx) => (
+          <Card key={`game_${idx + 1}`}>
+            <img
+              src={`/static/images/game/game${idx + 1}-2.png`}
+              alt={`game_${idx + 1}`}
+            />
+          </Card>
+        ))}
       </WrapShowCard>
     </Panel>
   )
 }
 
-const Row = styled.div`
-  display: flex;
-  margin: 16px 12px;
-`
-
 const Card = styled.div`
+  display: inline-block;
+  width: calc(100% / 5.9);
   flex: 1;
-  height: 280px;
-  background: skyblue;
-  margin-right: 8px;
+  height: 200px;
+  margin: 8px 16px;
+  img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `
 
 const WrapShowCard = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 16px;
-  ${Card}:last-child {
-    margin-right: 0;
-  }
+  padding: 16px;
 `

@@ -6,12 +6,38 @@ export default function SectionBlog() {
     <Panel title='บทความ' subTitle='MFGAME88 & BLOG'>
       <WrapShowCard>
         <Row>
-          <Card>boat</Card>
-          <Card>boat</Card>
+          <Card>
+            <img src='/static/images/blog/01.jpg' alt='blog' />
+            <div className='content'>
+              <div className='title'>หมวดหมู่: บทความ</div>
+              <div className='name'>
+                เกมมือถือออนไลน์ 6 เคล็ดลับที่เป็นประโยชน์สำหรับการเล่นสล็อต
+              </div>
+            </div>
+          </Card>
+          <Card>
+            <img src='/static/images/blog/01.jpg' alt='blog' />
+            <div className='content'>
+              <div className='title'>หมวดหมู่: บทความ</div>
+              <div className='name'>การเลือกเล่นเกมสล็อต</div>
+            </div>
+          </Card>
         </Row>
         <Row>
-          <Card>boat</Card>
-          <Card>boat</Card>
+          <Card>
+            <img src='/static/images/blog/01.jpg' alt='blog' />
+            <div className='content'>
+              <div className='title'>หมวดหมู่: บทความ</div>
+              <div className='name'>สล็อตสำหรับมือใหม่</div>
+            </div>
+          </Card>
+          <Card>
+            <img src='/static/images/blog/01.jpg' alt='blog' />
+            <div className='content'>
+              <div className='title'>หมวดหมู่: บทความ</div>
+              <div className='name'>เทคนิคการเล่นสล็อต</div>
+            </div>
+          </Card>
         </Row>
       </WrapShowCard>
     </Panel>
@@ -25,9 +51,24 @@ const Row = styled.div`
 
 const Card = styled.div`
   flex: 1;
-  height: 172px;
-  background: skyblue;
   margin-right: 8px;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  img {
+    width: 150px;
+    height: 100px;
+    margin-right: 16px;
+  }
+  .content {
+    .title {
+      font-size: 1rem;
+      color: #adb5bd;
+    }
+    .name {
+      font-size: 18px;
+    }
+  }
 `
 
 const WrapShowCard = styled.div`

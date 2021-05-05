@@ -4,8 +4,15 @@ import 'react-image-gallery/styles/css/image-gallery.css'
 
 const images = [
   {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    original: '/static/images/slide/slide_01.png',
+    thumbnail: '/static/images/slide/slide_01.png',
+    height: '500px',
+    width: '100%',
+    fullscreen: false,
+  },
+  {
+    original: '/static/images/slide/slide_02.png',
+    thumbnail: '/static/images/slide/slide_02.png',
     height: '500px',
     width: '100%',
     fullscreen: false,
