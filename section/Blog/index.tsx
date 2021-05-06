@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import Panel from '../../components/Panel/Index'
+import Constants from '../../constants'
 
 export default function SectionBlog() {
   return (
-    <Panel title='บทความ' subTitle='MFGAME88 & BLOG'>
+    <Panel title='บทความ' subTitle='JOKER345TH & BLOG'>
       <WrapShowCard>
         <Row>
           <Card>
@@ -46,7 +47,11 @@ export default function SectionBlog() {
 
 const Row = styled.div`
   display: flex;
+  flex-direction: row;
   margin: 16px 12px;
+  @media only screen and (max-width: ${Constants.SCREEN_SIZE.XS}px) {
+    flex-direction: column;
+  }
 `
 
 const Card = styled.div`
@@ -55,6 +60,11 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   padding-right: 40px;
+  @media only screen and (max-width: ${Constants.SCREEN_SIZE.XS}px) {
+    align-items: flex-start;
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
   img {
     width: 150px;
     height: 100px;

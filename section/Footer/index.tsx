@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 import { LayoutWrapper } from '../../components/Layout/index'
+import Constants from '../../constants'
 
 export default function Footer() {
   return (
@@ -8,7 +10,11 @@ export default function Footer() {
         <WrapItem>
           <h1>เมนูนำทาง</h1>
           <ul>
-            <li>หน้าแรก</li>
+            <li>
+              <Link href='/'>
+                <a>หน้าแรก</a>
+              </Link>
+            </li>
             <li>วิธีการเล่น</li>
             <li>บล็อก</li>
           </ul>
@@ -16,12 +22,18 @@ export default function Footer() {
         <WrapItem>
           <h1>เมนูสมาชิก</h1>
           <ul>
-            <li>สมัครสมาชิก</li>
+            <li>
+              <a href='https://member.joker345th.com/register'>สมัครสมาชิก</a>
+            </li>
             <li>ฝาก-ถอน</li>
-            <li>ดาวน์โหลดเกม</li>
+            <li>
+              <a href='https://joker123.net'>ดาวน์โหลดเกม</a>
+            </li>
             <li>โปรโมชั่น</li>
             <li>คำถามที่พบบ่อย</li>
-            <li>เข้าสู่ระบบ</li>
+            <li>
+              <a href='https://member.joker345th.com/login'>เข้าสู่ระบบ</a>
+            </li>
           </ul>
         </WrapItem>
         <WrapItem>
@@ -38,6 +50,13 @@ export default function Footer() {
           </div>
         </WrapItem>
       </CustomLayout>
+
+      <WrapIconBank>
+        <img src='/static/images/bank/scb.png' alt='scb' />
+        <img src='/static/images/bank/kbank.png' alt='kbank' />
+        <img src='/static/images/bank/krungsri.png' alt='krungsri' />
+        <img src='/static/images/bank/true_wallet.png' alt='true_wallet' />
+      </WrapIconBank>
     </Container>
   )
 }
@@ -45,10 +64,25 @@ export default function Footer() {
 const Container = styled.div`
   position: relative;
   background: #171615;
+  @media only screen and (max-width: ${Constants.SCREEN_SIZE.XS}px) {
+    display: none;
+  }
 `
 
 const WrapItem = styled.div`
   color: white;
+  li {
+    list-style-type: circle;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  div {
+    text-shadow: 1px 0 4px #000;
+    opacity: 0.5;
+    font-size: 18px;
+  }
 `
 
 const CustomLayout = styled(LayoutWrapper)`
@@ -59,6 +93,24 @@ const CustomLayout = styled(LayoutWrapper)`
     flex: 0.5;
     &:last-child {
       flex: 1;
+    }
+  }
+`
+
+const WrapIconBank = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+
+  img {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    filter: grayscale(1);
+    transition: all 300ms;
+    &:hover {
+      filter: grayscale(0);
     }
   }
 `

@@ -1,11 +1,16 @@
 import styled from 'styled-components'
-
+import ArrowRight from '../Icon/ArrowRight'
 interface ButtonProps {
   children: JSX.Element | JSX.Element[] | string
   width?: string
 }
 export default function Button({ children, width }: ButtonProps) {
-  return <ContainerButton width={width}>{children}</ContainerButton>
+  return (
+    <ContainerButton width={width}>
+      <ArrowRight />
+      {children}
+    </ContainerButton>
+  )
 }
 
 interface ContainerButtonProps {

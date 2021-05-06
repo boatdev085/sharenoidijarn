@@ -11,13 +11,30 @@ import SectionBlog from '../section/Blog'
 import SectionGame from '../section/Game'
 import Footer from '../section/Footer'
 
+const images = [
+  {
+    original: '/static/images/slide/slide_01.png',
+    thumbnail: '/static/images/slide/slide_01.png',
+    height: '500px',
+    width: '100%',
+    fullscreen: false,
+  },
+  {
+    original: '/static/images/slide/slide_02.png',
+    thumbnail: '/static/images/slide/slide_02.png',
+    height: '500px',
+    width: '100%',
+    fullscreen: false,
+  },
+]
+
 export default function Home() {
   return (
     <Container>
       <MainHeader />
       <BgMain>
         <LayoutWrapper>
-          <ImageGallery />
+          <ImageGallery images={images} />
         </LayoutWrapper>
         <Jackpot />
         <CustomLayoutContent>
@@ -59,4 +76,9 @@ const CustomLayoutContent = styled(LayoutWrapper)`
 const CustomEasyPlay = styled.img`
   margin-bottom: 8px;
   width: 100%;
+  box-sizing: border-box;
+  border: 5px solid transparent;
+  &:hover {
+    border: 5px solid #720101;
+  }
 `
